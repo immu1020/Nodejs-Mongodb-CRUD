@@ -6,7 +6,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   },
-  "scripts": {
-    "start": "node server.js"
+"scripts": {
+  "start": "node server.js",
+  "build": "echo 'No build step required'"
   }
 }

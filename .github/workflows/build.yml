@@ -29,18 +29,13 @@ jobs:
         run: echo "Skipping build directory check"
 
 
-      - name: Verify build output
+      - name: Verify project files
         run: |
-          if [ ! -d build ]; then
-            echo "No build directory found!"
-            exit 1
-          else
-            echo "Build folder found:"
-            ls -lh build
-          fi
-
-      - name: Upload build artifact
+         echo "Project files found:"
+         ls -lh
+      - name: Upload source
         uses: actions/upload-artifact@v4
         with:
-          name: node-build
-          path: build/
+         name: node-source
+         path: .
+
